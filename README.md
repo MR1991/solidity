@@ -2,7 +2,7 @@
 First dapp in solidity
 
 
-#### Lesson 1: Configuring google compute engine
+### Lesson 1: Configuring google compute engine
 https://www.youtube.com/watch?v=rmtsh7Q7sbE
 https://gist.github.com/AlwaysBCoding/9ce09281e5e097ce8ab7add2602c2fc7
 
@@ -102,3 +102,16 @@ console.log(privateKeyToAddress(process.argv[2]))
 
 Then run node keypairs.js "64bitstring", so
 node keypairs.js 1234567890123456789012345678901234567890123456789012345678901234
+
+### Lesson 4: Transactions  
+mkdir transactions  
+cd transactions  
+ratom package.json  
+{  
+  "dependencies": {  
+    "web3": "0.17.0-alpha",  
+    "ethereumjs-util": "4.5.0",  
+    "ethereumjs-tx": "1.1.2"  
+  }  
+}  
+
