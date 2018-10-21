@@ -29,10 +29,10 @@ On local atom start server
 ratom test.txt   
 
 #### More installing
-sudo apt-get install -y build-essential
-wget -qO- https://deb.nodesource.com/setup_10.x | sudo -E bash -
-sudo apt-get install -y nodejs
-sudo npm install -g ganache-cli
+sudo apt-get install -y build-essential  
+wget -qO- https://deb.nodesource.com/setup_10.x | sudo -E bash -  
+sudo apt-get install -y nodejs  
+sudo npm install -g ganache-cli  
 
 #### Run ganache https://github.com/trufflesuite/ganache-cli
 ganache-cli
