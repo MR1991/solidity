@@ -45,7 +45,7 @@ ratom package.json
 {  
   "dependencies": {  
     "web3": "0.17.0-alpha"  
-    }  
+  }  
 }  
 
 Then run the below to install dependency:  
