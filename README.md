@@ -2,7 +2,7 @@
 First dapp in solidity
 
 
-#### Configuring google compute engine
+#### Lesson 1: Configuring google compute engine
 https://www.youtube.com/watch?v=rmtsh7Q7sbE
 https://gist.github.com/AlwaysBCoding/9ce09281e5e097ce8ab7add2602c2fc7
 
@@ -60,3 +60,45 @@ var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"))
 web3.eth.accounts  
 
 // If web3.eth.accounts matches the accounts in your genache-cli screen, you are good to go  
+
+### Lesson 2: Creating Ethereum Keypairs
+mkdir eth-keypairs
+ratom package.json  
+
+{  
+  "dependencies": {
+    "web3": "0.17.0-alpha",
+    "ethereumjs-util": "4.5.0"
+  }
+}  
+
+npm install
+
+node
+var Web3 = require("web3")
+> undefined
+var web3 = new Web3
+
+
+Private key is always 64 characters
+Wallet address is 40 last characters of public key with 0x in front of it.
+web3.sha("40 digits") to generate hashes. 
+
+ratom keypairs.js  
+  
+var EthUtil = require("ethereumjs-util")  
+  
+var hexToBytes = function(hex) {  
+  for (var bytes = [], c = 0; c < hex.length; c+=2)  
+  bytes.push(parseInt(hex.substr(c, 2), 16));  
+  return bytes;  
+}  
+  
+var privateKeyToAddress = function(privateKey) {  
+  return `0x${EthUtil.privateToAddress(hexToBytes(privateKey)).toString('hex')}`  
+}  
+  
+console.log(privateKeyToAddress(process.argv[2]))  
+
+Then run node keypairs.js "64bitstring", so
+node keypairs.js 1234567890123456789012345678901234567890123456789012345678901234
